@@ -9,6 +9,8 @@ jobs:
     steps:
     - name: Checkout repository
       uses: actions/checkout@v3
+    - name: Create logs directory
+      run: mkdir -p logs
     - name: Set up PHP
       uses: shivammathur/setup-php@v2
       with:
@@ -25,7 +27,7 @@ jobs:
       run: go mod download
     - name: Build and run Golang file
       working-directory: ./Files
-      run: go run ./main.go > logs/go_run.log 2>&1
+      run: go run ./main.go > ../logs/go_run.log 2>&1
     - name: Move Files to Bulk Directory
       run: |
         mkdir -p bulk
