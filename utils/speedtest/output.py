@@ -3,22 +3,20 @@ import base64
 import os
 import time
 
-out_json = './out.json'
-
+out_json = './utils/speedtest/out.json'
 sub_all_base64 = "./sub/sub_merge_base64.txt"
 sub_all = "./sub/sub_merge.txt"
 Base64_file_base64 = "./Base64.txt"
 V2_file = "./V2.txt"
 Allconfig_Base = "./Allconfig"
-
 splitted_output = "./sub/splitted/"
 
 def read_json(file):
-    while not os.path.isfile(file):
-        print('Awaiting speedtest complete')
-        time.sleep(30)
+    if not os.path.isfile(file):
+        with open('logs/output_py.log', 'w') as f:
+            f.write("Error: out.json not found")
+        exit(1)
     with open(file, 'r', encoding='utf-8') as f:
-        print('Reading out.json')
         proxies_all = json.load(f)["nodes"]
         f.close()
     return proxies_all
@@ -36,7 +34,6 @@ def output(list, num):
     with open('./LogInfo.txt', 'w') as f1:
         f1.writelines(output_list)
         f1.close()
-        print('Write Log Success!')
 
     output_list = [item["link"] for item in list]
 
@@ -66,56 +63,46 @@ def output(list, num):
     with open(os.path.join(splitted_output, "vmess.txt"), 'w') as f:
         vmess_content = "\n".join(vmess_outputs)
         f.write(vmess_content)
-        print('Write vmess splitted Success!')
         f.close()
 
     with open(os.path.join(splitted_output, "vless.txt"), 'w') as f:
         vless_content = "\n".join(vless_outputs)
         f.write(vless_content)
-        print('Write vless splitted Success!')
         f.close()
 
     with open(os.path.join(splitted_output, "trojan.txt"), 'w') as f:
         trojan_content = "\n".join(trojan_outputs)
         f.write(trojan_content)
-        print('Write trojan splitted Success!')
         f.close()
 
     with open(os.path.join(splitted_output, "ssr.txt"), 'w') as f:
         ssr_content = "\n".join(ssr_outputs)
         f.write(ssr_content)
-        print('Write ssr splitted Success!')
         f.close()
 
     with open(os.path.join(splitted_output, "ss.txt"), 'w') as f:
         ss_content = "\n".join(ss_outputs)
         f.write(ss_content)
-        print('Write ss splitted Success!')
         f.close()
 
     with open(sub_all_base64, 'w+', encoding='utf-8') as f:
         f.write(content_base64)
-        print('Write All Base64 Success!')
         f.close()
 
     with open(Base64_file_base64, 'w+', encoding='utf-8') as f:
         f.write(content_base64_part)
-        print('Write Part Base64 Success!')
         f.close()
 
     with open(sub_all, 'w') as f:
         f.write(content)
-        print('Write All Success!')
         f.close()
 
     with open(Allconfig_Base, 'w') as f:
         f.write(content)
-        print('Write Base Success!')
         f.close()
 
     with open(V2_file, 'w') as f:
         f.write('\n'.join(output_list[0:num]))
-        print('Write Part Base Success!')
         f.close()
 
     return content
