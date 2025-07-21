@@ -9,7 +9,7 @@ wget -O utils/speedtest/lite_config.json https://raw.githubusercontent.com/tahma
 
 # اجرای LiteSpeedTest با محدودیت زمانی
 chmod +x utils/speedtest/lite-linux-amd64
-timeout 300 utils/speedtest/lite-linux-amd64 --config utils/speedtest/lite_config.json --test https://raw.githubusercontent.com/tahmaseb73/Iran_Config_Collector/main/bulk/merge3.txt > utils/speedtest/speedtest_output.log 2>&1
+timeout 300 utils/speedtest/lite-linux-amd64 --config utils/speedtest/lite_config.json --test ./bulk/merge3.txt > utils/speedtest/speedtest_output.log 2>&1
 
 # انتقال out.json (در صورت تولید در ریشه)
 [ -f out.json ] && mv out.json utils/speedtest/out.json
