@@ -9,6 +9,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+      - name: Set up PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.0'
+      - name: Run PHP processor
+        run: php Files/vmess_processor.php > php_run.log 2>&1
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
@@ -25,7 +31,7 @@ jobs:
         run: mkdir -p ./sub/splitted
       - name: Check input files
         run: |
-          ls -l ./bulk/merge1.txt ./bulk/merge2.txt ./bulk/merge3.txt || echo "Input files not found"
+          ls -l ./bulk/merge1.txt ./bulk/merge2.txt ./bulk/merge3.txt ./bulk/vmessclean.txt || echo "Input files not found"
       - name: Run Lite Speedtest
         run: |
           sh ./utils/speedtest/speedtest2.sh > speedtest.log 2>&1
@@ -35,10 +41,12 @@ jobs:
         run: |
           git config --local user.email "actions@github.com"
           git config --local user.name "GitHub Actions"
-          git pull origin main --rebase
-          git add Allconfig Base64.txt V2.txt ./sub/sub_merge.txt ./sub/sub_merge_base64.txt LogInfo.txt ./sub/splitted/*
-          git checkout main
-          git commit -m "✔️ $(date '+%Y-%m-%d %H:%M:%S') Speed Test" || echo "No changes to commit"
+          git status
+          git add . || echo "No files to add"
+          git commit -m "Stage changes before pull" || echo "No changes to commit"
+          git pull origin main --rebase || echo "Pull failed, continuing"
+          git add Allconfig Base64.txt V2.txt ./sub/sub_merge.txt ./sub/sub_merge_base64.txt LogInfo.txt ./sub/splitted/* ./bulk/* || echo "No files to add"
+          git commit -m "☠️ $(date '+%Y-%m-%d %H:%M:%S') Speed Test" || echo "No changes to commit"
       - name: Push Changes
         uses: ad-m/github-push-action@v0.8.0
         with:
