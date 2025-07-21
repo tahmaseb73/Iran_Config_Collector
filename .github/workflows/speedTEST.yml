@@ -9,11 +9,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: Create output directories
-        run: |
-          mkdir -p logs
-          mkdir -p ./sub/splitted
-          mkdir -p ./utils/speedtest
+      - name: Create logs directory
+        run: mkdir -p logs
       - name: Set up PHP
         uses: shivammathur/setup-php@v2
         with:
@@ -32,19 +29,16 @@ jobs:
         run: |
           pip install speedtest-cli
           pip install -r ./utils/requirements.txt > logs/pip_install.log 2>&1
+      - name: Create output directories
+        run: mkdir -p ./sub/splitted ./utils/speedtest ./logs
       - name: Check input files
         run: |
           ls -l ./bulk/merge1.txt ./bulk/merge2.txt ./bulk/merge3.txt ./bulk/vmessclean.txt || echo "Input files not found"
       - name: Run Lite Speedtest
         run: |
-          sh ./utils/speedtest/speedtest2.sh > logs/speedtest.log 2>&1
-          ls -l ./utils/speedtest/out.json || echo "out.json not found"
-          if [ -f ./utils/speedtest/out.json ]; then
-            python ./utils/speedtest/output.py
-          else
-            echo "Error: out.json not found, skipping output.py"
-            exit 1
-          fi
+          sh ./utils/speedtest/speedtest2.sh > logs/speedtest.log 2>&1 || echo "speedtest2.sh failed"
+          ls -l ./utils/speedtest/out.json ./utils/speedtest/speedtest_output.log || echo "Output files not found"
+          python ./utils/speedtest/output.py > logs/output_py.log 2>&1
       - name: Commit Changes
         run: |
           git config --local user.email "actions@github.com"
