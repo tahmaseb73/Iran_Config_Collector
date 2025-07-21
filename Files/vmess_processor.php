@@ -50,10 +50,3 @@ if ($vmess_data === false) {
     file_put_contents("logs/php_error.log", "Error: Could not fetch data from $vmess_url");
     exit(1);
 }
-
-// Process VMess configurations
-$output = remove_duplicate_vmess($vmess_data);
-
-// Save processed output to a file
-file_put_contents("vmessclean.txt", $output);
-?>
