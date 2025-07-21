@@ -16,7 +16,7 @@ jobs:
     - name: Install Go dependencies
       run: go mod download
     - name: Build and run Golang file
-      run: go run ./main.go
+      run: go run ./main.go > go_run.log 2>&1
     - name: Move Files to Bulk Directory
       run: |
         mkdir -p bulk
@@ -52,7 +52,7 @@ jobs:
         git checkout main
         git commit -m "✔️ $(date '+%Y-%m-%d %H:%M:%S') Collected" || echo "No changes to commit"
     - name: Push Changes
-      uses: ad-m/github-push-action@master
+      uses: ad-m/github-push-action@v0.8.0
       with:
-        github_token: ${{ secrets.PUSH_TOKEN }}
+        github_token: ${{ secrets.GITHUB_TOKEN }}
         branch: main
