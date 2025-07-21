@@ -21,7 +21,7 @@ jobs:
       uses: actions/setup-go@v5
       with:
         go-version: '1.19'
-        go-mod-path: Files/go.mod
+        cache-dependency-path: Files/go.sum
     - name: Install Go dependencies
       working-directory: ./Files
       run: go mod download
@@ -59,14 +59,7 @@ jobs:
       run: |
         git config --local user.email "actions@github.com"
         git config --local user.name "GitHub Actions"
-        git status
-        git add . || echo "No files to add"
-        git commit -m "Stage changes before pull" || echo "No changes to commit"
-        git pull origin main --rebase || echo "Pull failed, continuing"
-        git add ./bulk/* || echo "No files to add in bulk"
-        git commit -m "✔️ $(date '+%Y-%m-%d %H:%M:%S') Collected" || echo "No changes to commit"
-    - name: Push Changes
-      uses: ad-m/github-push-action@v0.8.0
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        branch: main
+        git add ./bulk/*
+        git commit -m "☠️ $(date '+%Y-%m-%d %H:%M:%S') Collected" || echo "No changes to commit"
+        git pull origin main --rebase
+        git push origin main
