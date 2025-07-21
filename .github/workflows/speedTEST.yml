@@ -38,7 +38,13 @@ jobs:
         run: |
           sh ./utils/speedtest/speedtest2.sh > logs/speedtest.log 2>&1 || echo "speedtest2.sh failed"
           ls -l ./utils/speedtest/out.json ./utils/speedtest/speedtest_output.log || echo "Output files not found"
-          python ./utils/speedtest/output.py > logs/output_py.log 2>&1
+          python ./utils/speedtest/output.py > logs/output_py.log 2>&1 || echo "output.py failed"
+      - name: Debug Logs
+        if: failure()
+        run: |
+          cat logs/speedtest.log || echo "speedtest.log not found"
+          cat utils/speedtest/speedtest_output.log || echo "speedtest_output.log not found"
+          cat logs/output_py.log || echo "output_py.log not found"
       - name: Commit Changes
         run: |
           git config --local user.email "actions@github.com"
