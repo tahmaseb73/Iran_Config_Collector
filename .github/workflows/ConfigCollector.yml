@@ -14,7 +14,7 @@ jobs:
       with:
         php-version: '8.0'
     - name: Run PHP processor
-      run: php Files/vmess_processor.php > php_run.log 2>&1
+      run: php Files/vmess_processor.php > logs/php_run.log 2>&1
     - name: Set up Go
       uses: actions/setup-go@v5
       with:
@@ -25,7 +25,7 @@ jobs:
       run: go mod download
     - name: Build and run Golang file
       working-directory: ./Files
-      run: go run ./main.go > go_run.log 2>&1
+      run: go run ./main.go > logs/go_run.log 2>&1
     - name: Move Files to Bulk Directory
       run: |
         mkdir -p bulk
@@ -46,7 +46,7 @@ jobs:
     - name: Create merge3.txt
       run: |
         cat ./bulk/vmess_iran.txt ./bulk/ss_iran.txt ./bulk/trojan_iran.txt > ./bulk/merge3.txt || echo "Failed to create merge3.txt"
-        sed -i '/^\(vmess:\/\/\|ss:\/\/\|trojan:\/\/\)/!d' ./bulk/merge3.txt
+        sed -i '/^\(ss:\/\/\|trojan:\/\/\)/!d' ./bulk/merge3.txt
     - name: Convert merge1.txt to base64
       run: |
         base64 ./bulk/merge1.txt > ./bulk/b64_merge1.txt || echo "Failed to convert merge1.txt"
@@ -61,8 +61,8 @@ jobs:
         git add . || echo "No files to add"
         git commit -m "Stage changes before pull" || echo "No changes to commit"
         git pull origin main --rebase || echo "Pull failed, continuing"
-        git add . || echo "No files to add"
-        git commit -m "☠️ $(date '+%Y-%m-%d %H:%M:%S') Collected" || echo "No changes to commit"
+        git add ./bulk/* || echo "No files to add in bulk"
+        git commit -m "✔️ $(date '+%Y-%m-%d %H:%M:%S') Collected" || echo "No changes to commit"
     - name: Push Changes
       uses: ad-m/github-push-action@v0.8.0
       with:
