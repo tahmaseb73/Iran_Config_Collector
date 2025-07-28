@@ -1,4 +1,4 @@
-trojan://NISHIKUITAN111@45.159.216.191:443?security=tls&sni=zb.ylks.xyz&type=ws&host=zb.ylks.xyz&path=%2F#@Hope_Net-join-us-on-Telegram
+trojan://NISHIKUITAN111@104.19.166.187:443?#@Hope_Net-join-us-on-Telegram
 trojan://blue2024@104.25.171.193:443?sni=hb.lii2010.us.kg#@Hope_Net-join-us-on-Telegram
 trojan://juzi@3.76.154.119:443?security=tls&sni=juzi8186-sr1.pages.dev&type=tcp#@awlix_ir
 trojan://ZU%290ryc%24VSrG@104.17.148.22:443?path=%2Ftrg2dhGAnG15ULOP7i%3Fed%3D2560&security=tls&alpn=http%2F1.1&host=uk2wbo0ikx3iyi4i9wjdyu6y-o28et7o.pages.dev&fp=randomized&type=ws&sni=uk2WbO0iKx3IyI4i9WjdYU6Y-O28ET7o.pagEs.DeV#%F0%9F%9B%A1%EF%B8%8F%20%40FreakConfig
@@ -19,8 +19,8 @@ trojan://telegram-id-directvpn@18.159.77.32:22223?security=tls&alpn=http/1.1&hea
 trojan://telegram-id-privatevpns@13.37.138.94:22222?security=tls&alpn=http/1.1&headerType=none&type=tcp&sni=trojan.burgerip.co.uk#(S104)%F0%9F%87%A8%F0%9F%87%B5t.me/PrivateVPNs
 trojan://telegram-id-privatevpns@13.36.11.189:22222?security=tls&alpn=http/1.1&headerType=none&type=tcp&sni=trojan.burgerip.co.uk#(S103)%F0%9F%87%A8%F0%9F%87%B5t.me/PrivateVPNs
 trojan://telegram-id-privatevpns@63.178.125.101:22222?security=tls&alpn=http/1.1&headerType=none&type=tcp&sni=trojan.burgerip.co.uk#(S102)%F0%9F%87%A9%F0%9F%87%AAt.me/PrivateVPNs
-trojan://NISHIKUITAN111@104.19.166.187:443?#@Hope_Net-join-us-on-Telegram
 trojan://NISHIKUITAN111@162.120.94.3:443?security=tls&sni=zb.ylks.xyz&type=ws&host=zb.ylks.xyz&path=%2F#@Hope_Net-join-us-on-Telegramvless://d342d11e-d424-4583-b36e-524ab1f0afa4@172.67.137.37:443?security=tls&sni=a.xn--i-sx6a60i.us.kg&type=ws&host=a.xn--i-sx6a60i.us.kg&path=%2F%3Fed%3D2560#@Hope_Net-join-us-on-Telegram
+trojan://NISHIKUITAN111@45.159.216.191:443?security=tls&sni=zb.ylks.xyz&type=ws&host=zb.ylks.xyz&path=%2F#@Hope_Net-join-us-on-Telegram
 trojan://telegram-id-directvpn@52.29.188.244:22223?security=tls&alpn=http/1.1&headerType=none&type=tcp&sni=trojan.burgerip.co.uk#OurChannel:@DirectVPN
 trojan://bacabac-caab-caab-adcb-acbabbbcccaa@127.0.0.1:8080?security=tls&type=tcp#@Hope_Net-join-us-on-Telegram
 trojan://NISHIKUITAN111@62.72.166.140:443?security=tls&sni=zb.ylks.xyz&type=ws&host=zb.ylks.xyz&path=%2F#@Hope_Net-join-us-on-Telegram
