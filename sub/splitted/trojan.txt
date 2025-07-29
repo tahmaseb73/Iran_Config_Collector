@@ -1,4 +1,4 @@
-trojan://bpb-trojan@188.114.97.123:443?sni=adagio.us.kg#@Hope_Net-join-us-on-Telegram
+trojan://ZU%290ryc%24VSrG@104.17.148.22:443?path=%2Ftrg2dhGAnG15ULOP7i%3Fed%3D2560&security=tls&alpn=http%2F1.1&host=uk2wbo0ikx3iyi4i9wjdyu6y-o28et7o.pages.dev&fp=randomized&type=ws&sni=uk2WbO0iKx3IyI4i9WjdYU6Y-O28ET7o.pagEs.DeV#%F0%9F%9B%A1%EF%B8%8F%20%40FreakConfig
 trojan://NISHIKUITAN111@31.22.116.151:443?#@Hope_Net-join-us-on-Telegram
 trojan://bpb-trojan@89.116.250.94:443?sni=bpb.my79801.com#@Hope_Net-join-us-on-Telegram
 trojan://bpb-trojan@86.38.214.132:443?sni=bpb.my79801.com#@Hope_Net-join-us-on-Telegram
@@ -14,9 +14,9 @@ trojan://telegram-id-directvpn@35.157.21.93:22223?security=tls&alpn=http/1.1&hea
 trojan://telegram-id-privatevpns@13.36.102.158:22222?security=tls&alpn=http/1.1&headerType=none&type=tcp&sni=trojan.burgerip.co.uk#(S104)%F0%9F%87%A8%F0%9F%87%B5t.me/PrivateVPNs
 trojan://juzi@104.19.57.183:2096?security=tls&sni=juzi8186-sr1.pages.dev&type=tcp#@awlix_ir
 trojan://telegram-id-directvpn@15.237.18.15:22222?security=tls&type=tcp&sni=trojan.burgerip.co.uk#@Hope_Net-join-us-on-Telegram
+trojan://bpb-trojan@188.114.97.123:443?sni=adagio.us.kg#@Hope_Net-join-us-on-Telegram
 trojan://98f0c223-cb75-4faa-859e-47110b1f052b@zula.ir:2096?security=tls&type=ws&sni=iNTeRnET4EVERIeONe7.PaGes.DeV&path=/Telegram-@V2ray_Alpha/?ed=2560&host=internet4everieone7.pages.dev#@Hope_Net-join-us-on-Telegram
 trojan://telegram-id-privatevpns@3.127.1.123:22222?security=tls&alpn=http/1.1&headerType=none&type=tcp&sni=trojan.burgerip.co.uk#(S101)%F0%9F%87%A9%F0%9F%87%AAt.me/PrivateVPNs
-trojan://ZU%290ryc%24VSrG@104.17.148.22:443?path=%2Ftrg2dhGAnG15ULOP7i%3Fed%3D2560&security=tls&alpn=http%2F1.1&host=uk2wbo0ikx3iyi4i9wjdyu6y-o28et7o.pages.dev&fp=randomized&type=ws&sni=uk2WbO0iKx3IyI4i9WjdYU6Y-O28ET7o.pagEs.DeV#%F0%9F%9B%A1%EF%B8%8F%20%40FreakConfig
 trojan://f282b878-8711-45a1-8c69-5564172123c1@172.67.181.173:443?path=%2FStupid-World%2F103.106.228.126-2053&security=tls&host=vpn.stupidworld.web.id&fp=chrome&type=ws&sni=vpn.stupidworld.web.id#%F0%9F%9B%A1%EF%B8%8F%20%40FreakConfig
 trojan://blue2024@108.162.195.161:443?sni=tb.promote.icu#@Hope_Net-join-us-on-Telegram
 trojan://telegram-id-privatevpns@15.236.74.230:22222?security=tls&alpn=http/1.1&headerType=none&type=tcp&sni=trojan.burgerip.co.uk#(S104)%F0%9F%87%A8%F0%9F%87%B5t.me/PrivateVPNs
